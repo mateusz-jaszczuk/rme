@@ -43,8 +43,6 @@
 <body>
 
 
-
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -53,25 +51,22 @@
           <h1 class="title is-1 publication-title">
             Rapid Mismatch Estimation via Neural Network Informed Variational Inference
           </h1>
-
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://yourprofile1.com">First Author</a>,
+              <a href="https://mateuszjaszczuk.com">Mateusz Jaszczuk</a>,
             </span>
             <span class="author-block">
-              <a href="https://yourprofile2.com">Second Author</a>
+              <a href="https://nbfigueroa.github.io">Nadia Figueroa</a>
             </span>
           </div>
-
           <div class="is-size-5 publication-authors">
-            <span class="author-block">Department of Your Shared Institution</span>
+            <span class="author-block">GRASP Lab, University of Pennsylvania</span>
           </div>
-
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fas fa-file-pdf"></i>
@@ -79,10 +74,9 @@
                   <span>Paper</span>
                 </a>
               </span>
-
               <!-- Code Link -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fab fa-github"></i>
@@ -92,7 +86,6 @@
               </span>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -103,21 +96,16 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
+      <video id="teaser" autoplay muted loop playsinline height="100% ">
         <source src="./static/videos/teaser.mp4"
                 type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
     </div>
   </div>
 </section>
 
 <section class="hero is-light is-medium">
-  <div class="hero-body pt-5">
+  <div class="hero-body pt-6 pb-6">
     <div class="container is-max-desktop">
       <!-- Abstract -->
       <div class="columns is-centered has-text-centered">
@@ -125,10 +113,21 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Update Abstract
-            </p>
-            <p>
-              Update Abstract
+              With robots increasingly operating in human-centric environments, 
+              ensuring soft and safe physical interactions, whether with humans, 
+              surroundings, or other machines, is essential. While compliant hardware can facilitate such interactions, 
+              this work focuses on impedance controllers that allow torque-controlled robots to safely and passively respond to 
+              contact while accurately executing tasks. From inverse dynamics to quadratic programming based controllers, the effectiveness 
+              of these methods relies on accurate dynamics models of the robot and the object it manipulates. Any model mismatch results in 
+              task failures and unsafe behaviors. Thus, we introduce Rapid Mismatch Estimation (RME), an adaptive, controller-agnostic, 
+              probabilistic framework that estimates end-effector dynamics mismatches online, without relying on external force-torque sensors. 
+              From the robot's proprioceptive feedback, a Neural Network Model Mismatch Estimator generates a prior for a Variational Inference 
+              solver, which rapidly converges to the unknown parameters while quantifying uncertainty. With a real 7-DoF manipulator driven by a 
+              state-of-the-art passive impedance controller, RME adapts to sudden changes in mass and center of mass at the end-effector in 
+              ~400 ms, in static and dynamic settings. 
+              We demonstrate RME in a collaborative scenario where a human attaches an unknown basket to the robot's end-effector 
+              and dynamically adds/removes heavy items, showcasing fast and safe adaptation to changing dynamics during physical 
+              interaction without any external sensory system.
             </p>
           </div>
         </div>
@@ -143,74 +142,165 @@
 <section class="section">
   <div class="container is-max-desktop">
 
+    <!-- Static Tests. -->
     <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Static Experiments</h2>
 
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">gggg Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
         <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
+          <!-- First Video Column -->
+          <div class="column">
+            <div class="content has-text-justified">
+              <video id="static_900" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/static_900g.mp4" type="video/mp4">
+              </video>
+            </div>
           </div>
-
+    
+          <!-- Second Video Column -->
+          <div class="column">
+            <div class="content has-text-justified">
+              <video id="static_1290" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/static_1290.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            To evaluate RME, we extensively tested the model with multiple static experiments, 
+            where the physical manipulator, subject to sudden changes in the dynamics model resulting from adding unknown mass to the end-effector, 
+            aimed to maintain the target equilibrium position and orientation. We compare the response of nominal Constrained Passive Interaction Controller (CPIC) to the same controller with RME gravity compensation augmentation.
+            RME provided rapid and accurate estimation of the attached external load,
+            allowing the robot to quickly converge to the equilibrium position from before applying the mismatch.
+          </p>
         </div>
       </div>
     </div>
-    <!--/ Matting. -->
+    <!--/ Static Tests. -->
+
+
+
+    <!-- Limit Cycle. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Tracking a Stable Limit Cycle</h2>
+
+        <div class="columns is-centered">
+          <!-- First Video Column -->
+          <div class="column">
+            <div class="content has-text-justified">
+              <video id="lc1" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/limit_cycle_1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+    
+          <!-- Second Video Column -->
+          <div class="column">
+            <div class="content has-text-justified">
+              <video id="lc2" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/limit_cycle_2.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+      
+        <div class="content has-text-justified">
+          <p>
+            To test the model in the dynamic scenario, we designed a Dynamical System with a stable limit cycle in the y-z plane, 
+            where the manipulator aims to achieve target velocities from the motion planner. As shown,
+             RME rapidly estimates mismatch parameters, allowing the robot to converge to the desired trajectory. Without adaptation, 
+             the manipulator reaches the spurious attractor, where the task force from the impedance controller is balanced by the gravitational 
+             force acting on the mass mismatch, preventing it from continuing on the given task.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Limit Cycle -->
+
+    <!-- Sequential HRI -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Sequential Adaptation with Human-Robot Interactions</h2>
+
+        <div class="columns is-centered">
+          <!-- First Video Column -->
+          <div class="column">
+            <div class="content has-text-justified">
+              <video id="hri_no_adaptation" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/hri_no_adaptation.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+    
+          <!-- Second Video Column -->
+          <div class="column">
+            <div class="content has-text-justified">
+              <video id="hri_adaptation" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/hri_adaptation.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+    
+        </div>
+
+      
+        <div class="content has-text-justified">
+          <p>
+            In this experiment, we evaluate the model's capability to perform continuous adaptation while maintaining passivity with respect to 
+            human-generated perturbations. We attach the unknown basket to the end effector, sequentially add and remove two unknown objects, 
+            and finally, remove the basket, perturbing the robot between these actions. RME provided an accurate load estimation,
+             allowing the robot to maintain target position and orientation, while being passive to human-generated forces (even when the model confused human perturbations with model mismatch,
+              it allowed perturbation, and instantaneously corrected itself after being released). 
+            Without RME-based adaptation, robot is pulled down by the gravitational force of external objects, which activates joint limit constraint of the Constrained Passive Interaction Controller.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Sequential HRI -->
+
+
+    <!-- QB Hand with perception -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">QB Hand with Perception - Update</h2>
+
+        <div class="columns is-centered">
+          <!-- First Video Column -->
+          <div class="column">
+            <div class="content has-text-justified">
+              <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/webs_test_1290.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+    
+          <!-- Second Video Column -->
+          <div class="column">
+            <div class="content has-text-justified">
+              <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/dollyzoom-stacked.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+    
+        </div>
+
+      
+        <div class="content has-text-justified">
+          <p>
+            Prepare videos and add description.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ QB Hand with perception -->
 
     
 
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Concurrent Work. -->
-
+  
   </div>
 </section>
 
@@ -218,14 +308,15 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{add_title,
-  author    = {Author #1, Author #2},
-  title     = {Add title},
-  journal   = {add journal},
-  year      = {add jear},
-}</code></pre>
+    <pre><code>@inproceedings{jaszczuk2025rme,
+      author = {Jaszczuk, Mateusz and Figueroa, Nadia},
+      title = {Rapid Mismatch Estimation via Neural Network Informed Variational Inference},
+      booktitle = {9th Conference on Robot Learning (CoRL)},
+      year = {2025}
+  }</code></pre>
   </div>
 </section>
+
 
 
 <footer class="footer">
