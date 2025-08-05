@@ -60,8 +60,9 @@
             </span>
           </div>
           <div class="is-size-5 publication-authors">
-            <span class="author-block">GRASP Lab, University of Pennsylvania</span>
+            <span class="author-block"><a href="https://www.grasp.upenn.edu" style="color: black !important; text-decoration: none;">GRASP Lab, University of Pennsylvania</a></span>
           </div>
+          
           <div class="is-size-5 publication-authors mt-4">
             <span class="author-block"><strong>Accepted at Conference on Robot Learning (CoRL) 2025</strong></span>
           </div>
@@ -263,6 +264,47 @@
       </div>
     </div>
     <!--/ Sequential HRI -->
+
+    <!-- qbHand -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Pick and Place with Human-Robot Interactions</h2>
+
+        <div class="columns is-centered">
+          <!-- First Video Column -->
+          <div class="column">
+            <div class="content has-text-justified">
+              <video id="hri_no_adaptation" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/pick_place.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+    
+          <!-- Second Video Column -->
+          <div class="column">
+            <div class="content has-text-justified">
+              <video id="hri_adaptation" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/intersecpt.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+    
+        </div>
+
+      
+        <div class="content has-text-justified">
+          <p>
+            In this experiment, we evelaute framework performance in Pick and Place task with clasic Inverse Kinematics controller, utilizing 
+            the qb SoftHand2 Research end effector, and OptiTrack motion capture system. In the first test, robot aims to pick unknown object (700 grams), and place it on top of the box,
+            maintaing passvity with respect to human-generated perturbations. Durring the process, we add additional 500 grams to the basket. RME allows
+            the robot to track desired trajectory by rapidly adapting to unknown dynamics, while controller without RME fails to pick up heavy object.
+            In the second test, robot aims to track and intercept the basket (1200 grams) from human and carry it to the desired position, which is possible
+            with the use of RME. In both experients, controller with RME augmentation preserves stability and passivity of the closed-loop system.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ qbHand -->
 
 
     
