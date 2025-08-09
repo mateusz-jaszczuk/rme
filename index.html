@@ -174,7 +174,7 @@
           <p>
             To evaluate RME, we extensively tested the model with multiple static experiments, 
             where the physical manipulator, subject to sudden changes in the dynamics model resulting from adding unknown mass to the end-effector, 
-            aimed to maintain the target equilibrium position and orientation. We compare the response of nominal Constrained Passive Interaction Controller (CPIC) to the same controller with RME gravity compensation augmentation.
+            aimed to maintain the target equilibrium position and orientation. We compare the response of nominal <a href="https://ieeexplore.ieee.org/abstract/document/10610232">Constrained Passive Interaction Controller (CPIC)</a> to the same controller with RME gravity compensation augmentation.
             RME provided rapid and accurate estimation of the attached external load,
             allowing the robot to quickly converge to the equilibrium position from before applying the mismatch.
           </p>
@@ -284,7 +284,7 @@
           <div class="column">
             <div class="content has-text-justified">
               <video id="hri_adaptation" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/intersecpt.mp4" type="video/mp4">
+                <source src="./static/videos/intercept.mp4" type="video/mp4">
               </video>
             </div>
           </div>
@@ -294,17 +294,18 @@
       
         <div class="content has-text-justified">
           <p>
-            In this experiment, we evelaute framework performance in Pick and Place task with clasic Inverse Kinematics controller, utilizing 
-            the qb SoftHand2 Research end effector, and OptiTrack motion capture system. In the first test, robot aims to pick unknown object (700 grams), and place it on top of the box,
-            maintaing passvity with respect to human-generated perturbations. Durring the process, we add additional 500 grams to the basket. RME allows
-            the robot to track desired trajectory by rapidly adapting to unknown dynamics, while controller without RME fails to pick up heavy object.
-            In the second test, robot aims to track and intercept the basket (1200 grams) from human and carry it to the desired position, which is possible
-            with the use of RME. In both experients, controller with RME augmentation preserves stability and passivity of the closed-loop system.
+            In this experiment, we evaluate framework performance in the Pick and Place task with a <a href="https://journals.sagepub.com/doi/full/10.1177/0278364918765952">passive velocity-based inverse kinematics (PVIK)</a> controller, utilizing 
+            the qb SoftHand2 Research end effector, and the OptiTrack motion capture system. In the first test, the robot aims to pick an unknown object (700 grams), and place it on top of the box,
+            maintaining passivity with respect to human-generated perturbations. During the process, we add an additional 500 grams to the basket. RME allows
+            the robot to track the desired trajectory by rapidly adapting to unknown dynamics, while a controller without RME fails to pick up a heavy object.
+            In the second test, the robot aims to track and intercept the basket (1200 grams) from a human and carry it to the desired position, which is possible
+            with the use of RME. In both experiments, the controller with RME augmentation preserves stability and passivity of the closed-loop system.
           </p>
         </div>
       </div>
     </div>
     <!--/ qbHand -->
+
   </div>
 </section>
 
